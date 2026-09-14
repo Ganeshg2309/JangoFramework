@@ -7,7 +7,7 @@ def view1(request):
     return HttpResponse(template.render())
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'home1.html')
 
 
 
