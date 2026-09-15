@@ -2,13 +2,34 @@
 {% load static %}
 {% block title %}
 <h> wellcome to Soptify </h>
-<link rel="stylesheet" href ="{% static 'style1.css' %}">
+
+
+<style>
+    div {
+    margin : auto;
+    background-color: green;} 
+</style>
 {% endblock %}
 
 {% block content %}
 <h>Choose your interest one </h>
-<div class="box"> 
+<a href="artist">
+<div style="background-color: antiquewhite; color:blue; padding:20px;">   
     <h1> Artists</h1>
-    <a href="artist"> view Artists </a>
 </div>
+</a>
+
+<a href="playlist">
+    <div style="background-color:aqua; color:blue;padding:20px;">
+        <h1> playlist </h1>
+    </div>
+</a>
+
+<a href="podcast">
+    <div style="background-color:bisque; color:blue;padding:20px;">
+    <h1> podcast </h1>
+</div>
+</a>
+
+
 {% endblock %}
