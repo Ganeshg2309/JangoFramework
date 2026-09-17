@@ -4,7 +4,7 @@ from django.template import loader
 
 
 def view1(request):
-    playlist={playlist1 : [
+    playlist=[
     {'title': 'BbY WOW', 'plays': 33059939, 'album': 'NO ME ARREPIENTO DE SENTIR TANTO'},
     {'title': 'Beauty And A Beat', 'plays': 23060351, 'album': 'Believe'},
     {'title': 'Earrings', 'plays': 22481881, 'album': 'Sweet Boy'},
@@ -16,8 +16,8 @@ def view1(request):
     {'title': 'Babydoll', 'plays': 19450905, 'album': "Don't Forget About Me, Demos"},
     {'title': 'back to friends', 'plays': 19424543, 'album': 'I Barely Know Her'},
     {'title': 'Billie Jean', 'plays': 19044517, 'album': 'Thriller'}
-]
-    }
-    return render(request,"playlist/1.html",playlist)
+    ]
+    
+    return render(request,"playlist/playlist_details.html",{"playlist":playlist})
 
-# Create your views here.
+

@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style> body { 
+        background-color:rgb(156, 246, 140) }
+        </style>
     {% block title %}
    
     {% endblock %}
 </head>
 
 <body> 
+    <hr/>
+    <nav style="padding:30px;background-color: aqua;">
+        <a href="{% url 'artist' %}"> artists </a>
+        <a href="{% url 'playlist' %}"> playlist</a>
+        <a href="{% url 'podcast' %}">podcast</a>
+    </nav>
+    <hr/>
     
+    <a href="{% url 'artist' %}">
+        <div style="padding: 20px;background-color:rgb(210, 210, 221);">
+            Artist
+        </div>
+    </a>
+
+    <a href="{% url 'podcast' %}">
+        <div style="padding:20px;cursor: pointer;background-color: bisque;">podcast</div>
+    </a>
+
+    <a href="{% url 'playlist' %}">
+        <div style="background-color: rgb(197, 230, 66); padding:20px;">
+            playlist
+        </div>
+    </a>
     {% block content %}
     {% endblock %}
     
