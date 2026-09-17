@@ -3,14 +3,13 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def view1(request):
-    name="SPB"
      
-    template = loader.get_template ( 'artist/artist.html')
-    return HttpResponse(template.render({"name1":name}))
+    template = loader.get_template ( 'artist/1.html')
+    return HttpResponse(template.render())
    
 
 def home(request):
-    return render(request, "base.html")
+    return render(request, 'home1.html')
 
     
 
