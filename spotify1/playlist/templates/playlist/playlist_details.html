@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h1><b>Name of the song titles</b></h1>
+{% for song in playlist %}
+{{ song.title }}
+<br>
+{% endfor %}
+
+<h1>Number of plays of each song</h1>
+{% for song in playlist %}
+{{song.plays}}
+<br>
+{% endfor %}
+
+<h1> Name of the albums </h1>
+{% for song in playlist %}
+{{song.album}}
+<br>
+{% endfor %}
+{% endblock %}
