@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head><title>display loan</title></head>
+    <body>
+        {% for loan in record %}
+        <div>
+            <hr/>
+        Name: {{loan.name}}<br>
+        Principle: {{loan.principle}}<br>
+        Rate: {{loan.rate}}<br>
+        time: {{loan.time}}<br>
+            <hr/>
+        </div>
+        {% empty %}
+        <p>No loans found</p>
+        {% endfor %}
+
+    </body>
+</html>

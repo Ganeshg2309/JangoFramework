@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>loan form</title>
+    </head>
+
+    <body>
+        {% if name %}
+        <p>name: {{name}}</p>
+        {% else %}
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">submit</button>
+        </form>
+        {% endif %}
+    </body>
+</html>

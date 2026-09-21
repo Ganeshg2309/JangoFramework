@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Farmer Loan2 Application</title>
+</head>
+
+<body>
+
+    <h1>Farmer Loan used {{form}} Application</h1>
+
+   
+        <form method="POST">
+
+            {% csrf_token %}
+
+            {{% form.as_p %}}
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+        <p> you can see the difference why we use name=form.cleaned_data['name'] in views.py </p>
+        <p> if i did't use that it will show directly as form type so,<br>observe difference below by filling fields on both side of this text</p>
+        <p>{{form.as_p}} </p>
+
+
+</body>
+
+</html>

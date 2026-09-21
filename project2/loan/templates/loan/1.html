@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Farmer Loan Application</title>
+</head>
+
+<body>
+
+    <h1>Farmer Loan Application</h1>
+
+    {% if name %}
+
+        <h2>Farmer Details</h2>
+
+        <p>Name: {{ name }}</p>
+        <p>Address: {{ address }}</p>
+        <p>Account Number: {{ account_number }}</p>
+        <p>{{form.as_p}}</p>
+
+    {% else %}
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+    {% endif %}
+
+</body>
+
+</html>
