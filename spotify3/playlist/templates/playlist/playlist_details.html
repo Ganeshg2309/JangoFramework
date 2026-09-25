@@ -29,4 +29,19 @@
 <br>
 {% endfor %}
 
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">submit
+    </button>
+
+</form>
+<table>
+<form method="POST">
+    {% csrf_token %}
+   <tr>your table<td>{{ form1.as_table }}</td></tr>
+    <button tyoe=""submit>submit</button>
+</form>
+</table>
+
 {% endblock %}

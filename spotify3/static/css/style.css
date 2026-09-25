@@ -1,0 +1,30 @@
+body {
+    background: rgb(219, 215, 210);
+}
+h1 {
+    color:aqua;
+}
+
+ .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        padding: 20px;
+        background-color: rgb(58, 82, 82);
+    }
+
+    .navbar a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+    }
+
+    .navbar img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+    }

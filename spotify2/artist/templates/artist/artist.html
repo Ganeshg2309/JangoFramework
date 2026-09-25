@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+<h1>this is artist page you can add artist details here</h1>
+{% endblock %}
+
+{% block content %}
+<style> 
+    body {
+        background-color:aquamarine;,
+    }
+</style>
+<p> <h1> Artist Names and Bio </h1></p>
+<p> Artist name in title form :{{name.1|title}} </p>
+<p>Artist name1: {{name.1}} </p>
+<p> Artist bio: {{bio.1}}
+<p> Artist bio length:{{bio.1|length}} </p>
+<p> default bio:{{bio.2|default:"none"}}</p>
+<p>SPB song:{{song.0|upper}}</p>
+<p>{{song.0}} released date:{{released_date.0}}</p>
+<p>{{song.0}} released date:{{released_date|date:"2026,12,1"}}</p>
+
+{% endblock %}
+

@@ -1,9 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
+from .forms import PlayListForm
+from .forms import SongRequestForm
 
 
 def view1(request):
+    form=PlayListForm()
+    form1=SongRequestForm()
   
     playlist = [
     {'title': 'BbY WOW', 'plays': 33059939, 'album': 'NO ME ARREPIENTO DE SENTIR TANTO'},
@@ -19,6 +23,6 @@ def view1(request):
     {'title': 'Billie Jean', 'plays': 19044517, 'album': 'Thriller'}
     ]
 
-    return render(request,"playlist/playlist_details.html",{"playlist":playlist})
+    # return render(request,"playlist/playlist_details.html",{"playlist":playlist})
 
-
+    return render(request ,"playlist/playlist_details.html",{"form":form,"playlist":playlist,"form1":form1})
