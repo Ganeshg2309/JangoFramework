@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}
+blog post
+{% endblock %}
+{% block content %}
+    <H1>MY BLOG </H1>
+    <h1><a href="{% url 'create_post' %}">create new post</a></h1>
+    <br><br>
+    {% for post in posts %}
+    <h1><a href="{% url 'post_detail' post.id %}">
+    {{ post.title }}
+        </a></h1>
+    <h1>author : {{post.author}} </h1>
+    <h1>{{post.content}} </h1>
+    <hr>
+    {% empty %}
+    <p>no blog posts</p>
+    {% endfor %}
+{% endblock %}

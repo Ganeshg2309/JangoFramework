@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}
+{{post.name}}
+{% endblock %}
+{% block content %}
+<h1>now you are on detalied data page so read entire article ok</h1>
+<p>its very interesting to share django jorney here</p>
+<hr>
+<h1>{{posts.title}}</h1>
+<p>{{posts.content}}</p>
+<p>{{posts.author}}</p>
+<p>{{posts.crteated_at}}</p>
+<a href="{% url 'edit_post' posts.id %}">edit post</a><br>
+<a href="{% url 'delete_post' posts.id %}">delete post</a>
+<br>
+<a href="{% url 'home' %}">back to home</a>
+
+{% endblock %}
