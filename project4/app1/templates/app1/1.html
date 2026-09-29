@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>enter your form </title>
+    </head>
+    <body>
+        <h1>data you entered were as follows</h1>
+        {% if name %}
+        <p>you loan applied details as follows</p>
+        <p>{{p}}<br>{{t}}<br>{{r}}</p>
+        <p>{{name}} your loan remaypent details as follows</p>
+        <p>EMI per month :  {{monthly_emi}} rupees </p>
+        <p>total months :{{n}} months </p>
+        <p>total interest :{{total_interest}} rupees <br> total ammount : {{total_ammount}} rupees </p>
+        {% else %}
+        <form method ="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">submit</button>
+        </form>
+        {% endif %}
+    </body>
+</html>
